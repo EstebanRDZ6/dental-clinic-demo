@@ -1,0 +1,39 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+# Otorga permisos para que el workflow pueda hacer el deploy en la rama gh-pages
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Build Web
+        # ¡IMPORTANTE!: Si tu sitio en GitHub Pages estará en un subdirectorio 
+        # (por ejemplo: https://tu-usuario.github.io/tu-repo/), debes configurar el base-href.
+        # Comenta la línea de abajo y descomenta la siguiente reemplazando 'NOMBRE_DEL_REPO'
+        run: flutter build web --release
+        # run: flutter build web --release --base-href "/NOMBRE_DEL_REPO/"
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/web
