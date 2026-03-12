@@ -1,16 +1,23 @@
-# dental_clinic
+# Dental Clinic Website / App 🦷
 
-A new Flutter project.
+A responsive and modern web application for a Dental Clinic, built completely with **Flutter**. This project serves as a comprehensive digital front desk for a dental practice, allowing patients to explore services, check prices, and book appointments.
 
-## Getting Started
+**🌐 Live Demo:** [https://estebanrdz6.github.io/dental-clinic-demo/](https://estebanrdz6.github.io/dental-clinic-demo/)
 
-This project is a starting point for a Flutter application.
+## 📑 Features
 
-A few resources to get you started if this is your first Flutter project:
+* **Home:** A welcoming landing page highlighting the clinic's core values.
+* **Treatments (`treatments_page`):** Detailed information about the dental services and procedures offered.
+* **Pricing (`prices_page`):** Clear and transparent cost breakdown for various treatments.
+* **About Us (`about_page`):** Information about the clinic, the team, and their professional background.
+* **Booking System (`booking_page`):** An interface for patients to easily schedule their upcoming dental appointments.
+* **Contact (`contact_page`):** Location, working hours, and contact forms to get in touch with the clinic.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🛠️ Tech Stack & Architecture
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* **Framework:** [Flutter](https://flutter.dev/) (Optimized for the Web)
+* **Navigation:** `go_router` for declarative routing and deep linking.
+* **State Management:** `provider` for efficient state handling across the app.
+* **Styling & Assets:** `google_fonts` and `cupertino_icons` for a polished UI.
+* **Localization:** `intl` and `flutter_localizations` configured to support multiple languages and region-specific formatting.
+* **CI/CD:** Automated build and deployment to GitHub Pages using GitHub Actions.
