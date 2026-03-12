@@ -29,7 +29,7 @@ jobs:
         # ¡IMPORTANTE!: Si tu sitio en GitHub Pages estará en un subdirectorio 
         # (por ejemplo: https://tu-usuario.github.io/tu-repo/), debes configurar el base-href.
         # Comenta la línea de abajo y descomenta la siguiente reemplazando 'NOMBRE_DEL_REPO'
-        run: flutter build web --release
+        run: flutter build web --release --base-href "/dental-clinic-demo/"
         # run: flutter build web --release --base-href "/NOMBRE_DEL_REPO/"
 
       - name: Deploy to GitHub Pages
